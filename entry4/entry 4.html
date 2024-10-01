@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>What's in my grandma bag</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+<h1 class="head"><marquee id="myDiv" direction="right"> WHAT'S IN MY GRANDMA'S BAG</marquee></h1>
+
+<div class="bag">
+  <img id="rotate1" src="./bag.png" alt="bag">
+</div>
+
+<div class="view">
+  <div class="object">
+    <img src="./comb.png" class="comb">
+    <img src="./lip.png" class="lip">
+    <img src="./pen.png" class="pen" >
+    <img src="./powder.png" class="powder">
+    <img src="./sunglasses.png" class="sunglasses">
+    <img src="./key.png" class="key">
+    <img src="./wipe.png" class="wipe">
+    <img src="./wallet.png" class="wallet">
+  </div>
+</div>
+
+<script>
+window.onscroll = function () {
+      scrollRotate();
+  };
+  function scrollRotate() {
+      let image = document.getElementById("rotate1");
+      image.style.transform = "rotate(" + window.pageYOffset/6 + "deg)";
+  }
+</script>
+
+</body>
+</html>
