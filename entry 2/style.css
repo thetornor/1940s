@@ -6,6 +6,7 @@
 }
 .header {
     display: flex;
+    margin: 5%;
 }
 body{
     background-color: black;
@@ -14,8 +15,8 @@ body{
     align-items: center;
 }
 .page_title{
-    color:antiquewhite;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(234, 255, 0);
+    font-family:Arial, Helvetica, sans-serif;
     font-size: 60px;
     flex-grow: 1;
     text-align: center;
@@ -31,6 +32,7 @@ img{
     margin-left: 10px;
     object-fit: cover;
     transition: 0.3s;
+    margin: 8%;
 }
 img:hover{
     cursor: pointer;
@@ -39,6 +41,11 @@ img:hover{
     display: grid;
     grid-template-columns: 10fr 10fr 10fr;
     grid-template-rows: 10fr 10fr 10fr;
+    margin: 80px; 
+    position: relative;
+    left: 6%;
+
+
 }
 .Light_item {
     display: flex;
