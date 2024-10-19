@@ -1,27 +1,93 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recorder</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/png" href="./record.jpg">
-</head>
 
+</head>
+<header>
+  <a href="https://thetornor.github.io/1940s/homepage/"> 
+  <img src="./home.png">
+  </a>
+</header>
 <body>
-    <h1 class="head">CHOOSE THE RECORD</h1>
-    <div class="banner">
-        <div class="slider" style="--quantity: 10">
-            <div class="item" style="--position: 1"> <img src="./img1.jpg"></div>
-            <div class="item" style="--position: 2"> <img src="./img2.jpg"></div>
-            <div class="item" style="--position: 3"> <img src="./img3.jpg"></div>
-            <div class="item" style="--position: 4"> <img src="./img4.jpg"></div>
-            <div class="item" style="--position: 5"> <img src="./img5.jpg"></div>
-            <div class="item" style="--position: 6"> <img src="./img6.jpg"></div>
-            <div class="item" style="--position: 7"> <img src="./img7.jpg"></div>
-            <div class="item" style="--position: 8"> <img src="./img8.jpg"></div>
-            <div class="item" style="--position: 9"> <img src="./img9.jpg"></div>
-            <div class="item" style="--position: 10"> <img src="./img10.jpg"></div>
+    <h1>CHOOSE THE RECORD</h1>
+    <div class="slideshow">
+        <div class="carousel">
+          <div class="slide active">
+            <img src="img1 copy.jpg" />
+          </div>
+          <div class="slide">
+            <img src="img2 copy.png" />
+          </div>
+          <div class="slide">
+            <img src="img3 copy.png" />
+          </div>
+          <div class="slide">
+            <img src="img4 copy.png" />
+          </div>
         </div>
-       
-    </div>
-    
+        <div class="controls">
+          <a href="#" data-index="1" class="active">
+            <img src="img1.jpg" />
+          </a>
+          <a href="#" data-index="2">
+            <img src="img2.jpg" />
+          </a>
+          <a href="#" data-index="3">
+            <img src="img3.jpg" />
+          </a>
+          <a href="#" data-index="4">
+            <img src="img4.jpg" />
+          </a>
+        </div>
+      </div>
+
+    <script>
+        const carousel = document.querySelector(".carousel");
+        const slides = document.querySelectorAll(".slide");
+        const controlLinks = document.querySelectorAll(".controls a");
+        let currentIndex = 1;
+        let intervalId;
+
+        const updateActiveSlide = (index) => {
+            document.querySelector(".slide.active").classList.remove("active");
+            slides[index - 1].classList.add("active");
+
+            document.querySelector(".controls a.active").classList.remove("active");
+            controlLinks[index - 1].classList.add("active");
+        };
+
+        const rotateCarousel = () => {
+            carousel.style.transform = `rotate(-${(currentIndex - 1) * 90}deg)`;
+        };
+
+        const startInterval = () => {
+            intervalId = setInterval(() => {
+                currentIndex = currentIndex < slides.length ? currentIndex + 1 : 1;
+                updateActiveSlide(currentIndex);
+                rotateCarousel();
+            }, 4000);
+        };
+
+        controlLinks.forEach((control) => {
+            control.addEventListener("click", (e) => {
+                e.preventDefault();
+                clearInterval(intervalId);
+
+                currentIndex = Number(control.dataset.index);
+                updateActiveSlide(currentIndex);
+                rotateCarousel();
+            });
+        });
+
+        carousel.addEventListener("mouseenter", () => clearInterval(intervalId));
+        carousel.addEventListener("mouseleave", startInterval);
+
+        startInterval();
+    </script>
 </body>
 </html>

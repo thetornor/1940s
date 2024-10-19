@@ -30,5 +30,23 @@ html, body {
 .box:hover {
     cursor: url('./cursor.png'), auto;
     transform: rotate(15deg);
-}    
+}   
+h2{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1vw;
+    color: rgb(201, 255, 24);
+}
+h5{
+    margin: 2cm;
+    width: 80vw;
+    height: 10vw;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(201, 255, 24);
+} 
      

@@ -1,12 +1,17 @@
-
-{
+html, body{
+    cursor: url('./cursor.png'), auto;
     margin: 10;
     padding: 0; 
     box-sizing: border-box;
 }
+header{
+    z-index: 4;
+    position: sticky;
+    margin: 2vw;
+}
 .header {
     display: flex;
-    margin: 5%;
+    margin: 5%; 
 }
 body{
     background-color: black;
@@ -22,6 +27,7 @@ body{
     text-align: center;
 }
 .container.image{
+    cursor: url('./cursor.png'), auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,7 +41,8 @@ img{
     margin: 8%;
 }
 img:hover{
-    cursor: pointer;
+    cursor: url('./cursor.png'), auto;
+    /*cursor: pointer;*/
 }
 #gallery {
     display: grid;
@@ -48,5 +55,6 @@ img:hover{
 
 }
 .Light_item {
+    cursor: url('./cursor.png'), auto;
     display: flex;
 }

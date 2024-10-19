@@ -5,6 +5,11 @@ body{
     background-color: rgb(180, 239, 63);
     height: 4000px;
 }
+header{
+    z-index: 4;
+    position: sticky;
+    margin: 2vw;
+}
 section{
     display:grid;
     place-items: center;

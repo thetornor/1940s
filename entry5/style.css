@@ -1,68 +1,87 @@
-*{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #fff020;
-}
-body::before{
-    position: absolute;
-    width: min(1400px, 90vw);
-    top: 10%;
-    left: 50%;
-    height: 90%;
-    transform: translateX(-50%);
-    content: '';
-    background-image: url(images/bg.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: top center;
-    pointer-events: none;
+
+html {
+    font-size: 62.5%;
 }
 h1{
-    font-size: 70px;
-    color: blue;
+    font-size: 50px;
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
-    bottom: 0%;
-    
+    top: 30%;
+    left: 2%;
+    color: blue;
+    width: 50px;
 }
-.banner{
-    width: 100%;
+header{
+    z-index: 4;
+    position: sticky;
+    margin: 2vw;
+}
+.slideshow {
     height: 100vh;
-    text-align: center;
+    background-color: rgb(255, 113, 36);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     overflow: hidden;
-    position: relative;
-}
-.banner .slider{
-    position: absolute;
-    width: 200px;
-    height: 250px;
-    top: 10%;
-    left: calc(50% - 100px);
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-    animation: autoRun 20s linear infinite;
-    z-index: 2;
-}
-@keyframes autoRun{
-    from{
-        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
-    }to{
-        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
-    }
 }
 
-.banner .slider .item{
-    position: absolute;
-    inset: 0 0 0 0;
-    transform: 
-        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-        translateZ(550px);
+.carousel {
+    width: 80rem;
+    height: 80rem;
+    border: 3rem solid #c6ff0c;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -55%;
+    transition: transform 1s;
 }
-.banner .slider .item img{
+
+.slide {
+    width: 20rem;
+    position: absolute;
+}
+
+.slide:nth-child(1) { bottom: -20rem; }
+.slide:nth-child(2) { left: -20rem; }
+.slide:nth-child(3) { top: -20rem; }
+.slide:nth-child(4) { right: -20rem; }
+
+.slide.active img {
+    transform: scale(2.5);
+    transition: transform 0.5s 0.5s;
+}
+
+.slide img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.controls {
+    position: sticky;
+    bottom: 5rem;
+}
+
+.controls a {
+    padding: 1rem;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 10rem;
+    transition: background-color 1s;
+}
+
+.controls a.active {
+    background-color:  #c6ff0c;
+}
+
+.controls img {
+    width: 10rem;
 }
