@@ -110,6 +110,7 @@ h3 {
 }
 
 .controls {
+    cursor: url('./cursor.png'), auto;
     position: sticky;
     bottom: 5rem;
 }
