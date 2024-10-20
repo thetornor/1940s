@@ -2,23 +2,28 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color: rgb(255, 61, 161);
   cursor: url('./cursor.png'), auto;
   overflow: hidden;
 }
 
 .icon {
+  cursor: url('./cursor.png'), auto;
   z-index: 4;
   position: sticky;
   margin: 2vw;
   display: inline-block;
-  position: relative; 
+  position: relative;
 }
 
 #home {
   width: 100px;
   height: 100px;
-  cursor: url('cursor.png'), auto;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
 }
 
 h3 {
@@ -27,13 +32,14 @@ h3 {
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: chartreuse;
+  padding: 5px;
+  background-color: rgb(255, 61, 161);
+  color: rgb(206, 255, 28);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  border-radius: 5px;
+  font-size: 16px;
+  border-radius: 3px;
   white-space: nowrap;
+  opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
@@ -44,21 +50,21 @@ h3 {
 }
 
 #ContentContainer {
-  cursor: url('cursor.png'), auto;
+  cursor: url('./cursor.png'), auto;
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  border: 15px solid black;
-  background-color: black;
+  border: 15px solid rgb(255, 61, 161);
+  background-color: rgb(255, 61, 161);
   box-sizing: border-box;
 }
 
 #thing {
-  width: 200px;
-  height: 200px;
-  background-image: url('./tuktuk.png');
+  width: 400px;
+  height: 400px;
+  background-image: url('./car.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

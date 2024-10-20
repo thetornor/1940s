@@ -9,13 +9,14 @@
 </head>
 
 <body>
-    <div>
+    <div class="wrapper">
         <span class="icon">
             <a href="https://thetornor.github.io/1940s/homepage/">
                 <img src="./homepage.png" id="home" alt="Homepage Icon">
             </a>
+            <h3 class="innerText hide">HOME</h3>
         </span>
-        <h3>HOME</h3>
+        
     </div>
 
     <div id="ContentContainer">
@@ -29,6 +30,11 @@
         const container = document.querySelector("#ContentContainer");
 
         container.addEventListener("click", getClickPosition, false);
+        
+        /* mouseover and mouseout events to `.wrapper` element */
+        var $wrapper = document.querySelector( '.wrapper' );
+        $wrapper.addEventListener( 'mouseover', displayTxt );
+        $wrapper.addEventListener( 'mouseout', removeTxt );
 
         function getClickPosition(e) {
             const rect = container.getBoundingClientRect();
@@ -37,6 +43,15 @@
 
             const translate3dValue = `translate3d(${xPosition}px, ${yPosition}px, 0)`;
             theThing.style.transform = translate3dValue;
+        }
+
+        // if hover -> display txt
+        function displayTxt(evt) {
+            evt.currentTarget.parentNode.querySelector( '.innerText' ).classList.remove( 'hide' );
+        }
+        // if leave -> hide txt
+        function removeTxt(evt) {
+            evt.currentTarget.querySelector( '.innerText' ).classList.add( 'hide' );
         }
     </script>
 </body>
