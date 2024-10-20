@@ -20,7 +20,7 @@ html, body {
     gap: 15px;
 }
 .box {
-    cursor: url('./cursor.png'), auto;
+    cursor: url('cursor.png'), auto;
     width: 300px;
     height: 300px;
     background-size: cover;
@@ -28,7 +28,7 @@ html, body {
     /* cursor: pointer; */
 }
 .box:hover {
-    cursor: url('./cursor.png'), auto;
+    cursor: url('cursor.png'), auto;
     transform: rotate(15deg);
 }   
 h2{

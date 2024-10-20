@@ -7,33 +7,36 @@
     <link rel="stylesheet" href="./Style.css">
     <link rel="icon" type="image/png" href="./stop.png">
 </head>
-<header>
-    <a href="https://thetornor.github.io/1940s/homepage/"> 
-    <img src="./home.png">
-    </a>
-</header>
+
 <body>
-    
+    <div>
+        <span class="icon">
+            <a href="https://thetornor.github.io/1940s/homepage/">
+                <img src="./homepage.png" id="home" alt="Homepage Icon">
+            </a>
+        </span>
+        <h3>HOME</h3>
+    </div>
+
     <div id="ContentContainer">
         <div id="thing"></div>
         <div id="centerText">RIDE AROUND!</div>
-        <div id="centerText1">click around window to move the car</div>
-
+        <div id="centerText1">Click around the window to move the car</div>
     </div>
 
     <script>
-     var theThing = document.querySelector("#thing");
-        var container = document.querySelector("#ContentContainer");
+        const theThing = document.querySelector("#thing");
+        const container = document.querySelector("#ContentContainer");
 
         container.addEventListener("click", getClickPosition, false);
 
         function getClickPosition(e) {
             const rect = container.getBoundingClientRect();
-            var xPosition = e.clientX - rect.left - (theThing.offsetWidth / 2);
-            var yPosition = e.clientY - rect.top - (theThing.offsetHeight / 2);
+            const xPosition = e.clientX - rect.left - (theThing.offsetWidth / 2);
+            const yPosition = e.clientY - rect.top - (theThing.offsetHeight / 2);
 
-            var translate3dvalue = `translate3d(${xPosition}px, ${yPosition}px, 0)`;
-            theThing.style.transform = translate3dvalue;
+            const translate3dValue = `translate3d(${xPosition}px, ${yPosition}px, 0)`;
+            theThing.style.transform = translate3dValue;
         }
     </script>
 </body>

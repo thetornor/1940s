@@ -2,6 +2,7 @@
     margin: 10;
     padding: 0; 
     box-sizing: border-box;
+    cursor: url('cursor.png'), auto;
 }
 header{
     z-index: 4;
@@ -33,6 +34,7 @@ body{
 padding: -10px;
   }
 .circle-text:hover{
+    cursor: url('cursor.png'), auto;
     transform: scale(1.2); 
     transition: 1s;
     color:rgb(255, 0, 0);
