@@ -1,14 +1,14 @@
 html, body {
     cursor: url('./cursor.png'), auto;
-    /* margin: 50px; */
     margin: 0;
     padding: 0;
     background-color: blue;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(255, 111, 0);
-    font-size: 80px;
+    font-size: 5vw; /* Scales with screen size */
     width: 100vw;
 }
+
 #container {
     margin: 50px auto;
     box-sizing: border-box;
@@ -20,18 +20,19 @@ html, body {
     gap: 15px;
 }
 .box {
-    cursor: url('cursor.png'), auto;
+    cursor: url('./cursor.png'), auto;
     width: 300px;
     height: 300px;
     background-size: cover;
+    background-position: center;
     transition: transform 0.3s;
-    /* cursor: pointer; */
 }
+
 .box:hover {
-    cursor: url('cursor.png'), auto;
     transform: rotate(15deg);
-}   
-h2{
+}
+
+h2 {
     font-size: 40px;
     display: flex;
     justify-content: center;
@@ -39,13 +40,27 @@ h2{
     margin: 1vw;
     color: rgb(201, 255, 24);
 }
-h5{
+
+h5 {
     margin: 2cm;
     width: 80vw;
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 0.2rem;
+    text-align: center;
     color: rgb(201, 255, 24);
-} 
-     
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2vw;
+    }
+
+    h5 {
+        margin: 1cm;
+        font-size: 0.9rem;
+    }
+
+    .box {
+        width: 200px;
+        height: 200px;
+    }
+}
