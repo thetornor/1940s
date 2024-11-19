@@ -1,0 +1,119 @@
+.html, body {
+    cursor: url('./cursor.png'), auto;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(251, 255, 176);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(223, 91, 40);
+    font-size: 11px;
+
+}
+.icon {
+    cursor: url('./cursor.png'), auto;
+    z-index: 4;
+    position: absolute;
+    left: 2%;
+    top: 5px;
+    margin: 2vw;
+    display: inline-block;
+    position: relative;
+  }
+  
+#home {
+    width: 100px;
+    height: 100px;
+    cursor: url('./cursor.png'), auto;
+  }
+  
+h3 {
+    position: absolute;
+    top: 110%; 
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 5px;
+    background-color:rgb(251, 255, 176));
+    color: rgb(98, 67, 115);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border-radius: 3px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+  
+.icon:hover h3 {
+    opacity: 1;
+    visibility: visible;
+    cursor: url('./cursor.png'), auto;
+}
+
+.head {
+    text-align: center;
+    color: #590f1f;
+    margin-bottom: 20px;
+    font-size: 40px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.translationHead {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: #590f1f;
+}
+
+.originalHead {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.head:hover .originalHead {
+    opacity: 0; 
+}
+
+.head:hover .translationHead {
+    opacity: 1;
+}
+
+
+.quote {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 20px auto;
+    width: 80%; 
+    transition: color 0.3s ease;
+}
+
+.quote .translation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: #458443;
+}
+
+.quote .original {
+    transition: opacity 0.3s ease;
+}
+
+.quote:hover .original {
+    opacity: 0;
+}
+
+.quote:hover .translation {
+    opacity: 1;
+}
+
+#player-container {
+    display: none; 
+}

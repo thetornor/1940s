@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fridge</title>
+    <link rel="stylesheet" href="./Style.css">
+    <link rel="icon" type="image/png" href="./stop.png">
+ </head> 
+
+<body>
+    <div class="icon">
+        <a href="https://thetornor.github.io/1940s/homepage/">
+            <img src="./homepage.png" id="home" alt="Homepage Icon">
+        </a>
+        <h3>HOME</h3>
+    </div >
+    <img src="img1.PNG" id="fullscreen-image" alt="Random Image Viewer">
+
+<script>
+    function getRandomImage() {
+        let randomNum = Math.floor(Math.random() * 12) + 1; 
+        return `img${randomNum}.PNG`; 
+    }
+    
+    const fullscreenImage = document.getElementById("fullscreen-image");
+    fullscreenImage.addEventListener("click", () => {
+        fullscreenImage.src = getRandomImage(); 
+    });
+</script>
+
+</body>
+</html>
