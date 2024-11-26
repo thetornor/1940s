@@ -43,7 +43,7 @@ h1{
     margin-right: 3%;
 
 }
-.threads{
+.slang{
     color: blue;
     font-size:100px;
     margin-right: 3%;
@@ -52,30 +52,8 @@ h1{
     transform: rotate(-15deg);
     transition: transform 0.5s, color 0.5s;
 }
-.threads :hover{
+.slang :hover{
     color: orange;
     transform: rotate(0) translateY(-20px);
     font-size: 130px;
-}
-
-.skinny{
-
-}
-.loaded{
-
-}
-.fab{
-
-}
-.bummer{
-
-}
-.Off{
-
-}
-.Out{
-
-}
-.wig{
-
 }
