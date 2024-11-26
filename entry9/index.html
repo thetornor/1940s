@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocab</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="">
+ </head> 
+
+<body>
+    <div class="wrapper">
+        <span class="icon">
+            <a href="https://thetornor.github.io/1940s/homepage/">
+                <img src="./homepage.png" id="home" alt="Homepage Icon">
+            </a>
+            <h3>HOME</h3>
+        </span>
+        
+    </div>
+
+    <audio id="sound-threads" src="fit.mp3" preload="auto"></audio>
+    <audio id="sound-groovy" src="fire.mp3" preload="auto"></audio>
+    <audio id="sound-skinny" src="spilling the tea.mp3" preload="auto"></audio>
+    <audio id="sound-loaded" src="Lit.mp3" preload="auto"></audio>
+    <audio id="sound-fab" src="Wig.mp3" preload="auto"></audio>
+    <audio id="sound-bummer" src="Big Yikes.mp3" preload="auto"></audio>
+    <audio id="sound-off" src="Salty.mp3" preload="auto"></audio>
+    <audio id="sound-out" src="Lewk.mp3" preload="auto"></audio>
+    <audio id="sound-wig" src="Go off, I guess.mp3" preload="auto"></audio>
+
+  <h1> GEN ALPHA SLANG</h1>  
+  <div class="threads" id="threads">
+    <div>
+        <b>Threads</b>
+    </div>
+    <div class="groovy" id="groovy">
+        <b>groovy</b>
+    </div>
+    <div class="skinny" id="skinny">
+        <b>skinny</b>
+    </div>
+    <div class="loaded" id="loaded">
+        <b>loaded</b>
+    </div>
+    <div class="fab" id="fab">
+        <b>fab</b>
+    </div>
+    <div class="bummer" id="bummer">
+        <b>bummer</b>
+    </div>
+    <div class="Off" id="off">
+        <b>ticked off</b>
+    </div>
+    <div class="Out" id="out">
+        <b>decked out</b>
+    </div>
+    <div class="wig" id="wig">
+        <b>don't flip your wig</b>
+    </div>
+
+ <script>
+ 
+    function playSound(id) {
+        const sound = document.getElementById(id);
+        sound.play();
+    }
+           
+    document.getElementById('threads').addEventListener('mouseenter', () => playSound('sound-threads'));
+    document.getElementById('groovy').addEventListener('mouseenter', () => playSound('sound-groovy'));
+    document.getElementById('skinny').addEventListener('mouseenter', () => playSound('sound-skinny'));
+    document.getElementById('loaded').addEventListener('mouseenter', () => playSound('sound-loaded'));
+    document.getElementById('fab').addEventListener('mouseenter', () => playSound('sound-fab'));
+    document.getElementById('bummer').addEventListener('mouseenter', () => playSound('sound-bummer'));
+    document.getElementById('off').addEventListener('mouseenter', () => playSound('sound-off'));
+    document.getElementById('out').addEventListener('mouseenter', () => playSound('sound-out'));
+    document.getElementById('wig').addEventListener('mouseenter', () => playSound('sound-wig'));
+</script>
+</body>
+</html>

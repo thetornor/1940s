@@ -1,0 +1,81 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('cursor.png'), auto;
+    background-color: rgb(182, 255, 11);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.icon {
+    z-index: 4;
+    margin: 2vw;
+    display: inline-block;
+    position: relative;
+}
+#home {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+h3 {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(182, 255, 11);
+    color: rgb(255, 28, 198);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 3px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+.icon:hover h3 {
+    opacity: 1;
+    visibility: visible;
+}
+
+h1{
+    color: rgb(255, 28, 198);
+    font-size: 70px;
+    text-align: right;
+    margin-right: 3%;
+
+}
+.threads{
+    color: blue;
+    font-size:100px;
+    margin-right: 3%;
+    position: absolute;
+    left: 20%;
+    transform: rotate(-15deg);
+    transition: transform 0.5s, color 0.5s;
+}
+.threads :hover{
+    color: orange;
+    transform: rotate(0) translateY(-20px);
+    font-size: 130px;
+}
+
+.skinny{
+
+}
+.loaded{
+
+}
+.fab{
+
+}
+.bummer{
+
+}
+.Off{
+
+}
+.Out{
+
+}
+.wig{
+
+}
