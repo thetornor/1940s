@@ -1,11 +1,11 @@
 html, body {
-    cursor: url('./cursor.png'), auto;
+    cursor: url('../images/cursor.png'), auto;
     margin: 0;
     padding: 0;
-    background-color: blue;
+    *background-color: blue;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(255, 111, 0);
-    font-size: 5vw; /* Scales with screen size */
+    font-size: 5vw; 
     width: 100vw;
 }
 
@@ -15,17 +15,79 @@ html, body {
     width: 80vw;
     display: grid;
     grid-template-columns: repeat(3, auto);
+    grid-template-areas: 
+    'box_00 box_01 box_02'
+    'box_10 box_11 box_12'
+    'box_20 box_21 box_22'
+    'box_30 box_31 box_32'
+    'box_40 . box_42';
     align-items: center;
     justify-items: center;
     gap: 15px;
 }
 .box {
-    cursor: url('./cursor.png'), auto;
+    cursor: url('../images/cursor.png'), auto;
     width: 300px;
     height: 300px;
     background-size: cover;
     background-position: center;
     transition: transform 0.3s;
+}
+
+.box_00 {
+    grid-area: box_00;
+}
+
+.box_01 {
+    grid-area: box_01;
+}
+
+.box_02 {
+    grid-area: box_02;
+}
+
+.box_10 {
+    grid-area: box_10;
+}
+
+.box_11 {
+    grid-area: box_11;
+}
+
+.box_12 {
+    grid-area: box_12;
+}
+
+.box_20 {
+    grid-area: box_20;
+}
+
+.box_21 {
+    grid-area: box_21;
+}
+
+.box_22 {
+    grid-area: box_22;
+}
+
+.box_30 {
+    grid-area: box_30;
+}
+
+.box_31 {
+    grid-area: box_31;
+}
+
+.box_32 {
+    grid-area: box_32;
+}
+
+.box_40 {
+    grid-area: box_40;
+}
+
+.box_42 {
+    grid-area: box_42;
 }
 
 .box:hover {
