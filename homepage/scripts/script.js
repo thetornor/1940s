@@ -12,6 +12,5 @@ for(let i = 0; i < length; i++){
         col_id = 2;
     }
 
-    // insert box_** into grid item class
     grid_items[i].classList.add(`box_${row_id}${col_id}`);
 }

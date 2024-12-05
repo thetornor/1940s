@@ -47,7 +47,10 @@ h3 {
     visibility: visible;
     cursor: url('./cursor.png'), auto;
 }
-
+#fullscreen-image{
+    align-items: center;
+    text-align: center;
+}
 img {
     margin: 5%;
     max-width: 70%;
