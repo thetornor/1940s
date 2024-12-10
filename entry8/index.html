@@ -16,18 +16,7 @@
         <h3>HOME</h3>
     </div >
     <img src="img1.PNG" id="fullscreen-image" alt="Random Image Viewer">
-
-<script>
-    function getRandomImage() {
-        let randomNum = Math.floor(Math.random() * 12) + 1; 
-        return `img${randomNum}.PNG`; 
-    }
-    
-    const fullscreenImage = document.getElementById("fullscreen-image");
-    fullscreenImage.addEventListener("click", () => {
-        fullscreenImage.src = getRandomImage(); 
-    });
-</script>
+    <script src="script.js"></script>
 
 </body>
 </html>
