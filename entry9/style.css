@@ -15,7 +15,7 @@ html, body {
 #home {
     width: 100px;
     height: 100px;
-    cursor: pointer;
+    cursor: url('./cursor.png'), auto;
 }
 h3 {
     position: absolute;
