@@ -24,7 +24,7 @@ html, body {
 }
 
 h3 {
-    position: fixed;
+    position: absolute;
     top: 110%;
     left: 50%;
     transform: translateX(-50%);
@@ -46,23 +46,26 @@ h3 {
     opacity: 1;
     visibility: visible;
 }
-.header {
+/* .header {
     display: flex;
-}
+} */
 .page_title{
+    width: 7rem;
     color:rgb(234, 255, 0);
     font-family:Arial, Helvetica, sans-serif;
     font-size: 100px;
     flex-grow: 1;
-    text-align: center;
+    text-align: left;
+    position: fixed;
+    top: 50%;
+    left: 2%;
+
 }
 .page_title:hover{
     cursor: url('./cursor.png'), auto;
-    color:rgb(255, 106, 0);
+    color:rgb(0, 0, 0);
     font-family:Arial, Helvetica, sans-serif;
-    font-size: 120px;
-    flex-grow: 1;
-    text-align: center;
+    transition: 0.4s;
 }
 .container.image{
     cursor: url('./cursor.png'), auto;
