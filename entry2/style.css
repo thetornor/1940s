@@ -24,7 +24,7 @@ html, body {
 }
 
 h3 {
-    position: absolute;
+    position: fixed;
     top: 110%;
     left: 50%;
     transform: translateX(-50%);
